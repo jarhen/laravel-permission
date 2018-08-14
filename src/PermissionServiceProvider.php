@@ -1,11 +1,11 @@
 <?php
 
-namespace Spatie\Permission;
+namespace Jarhen\Permission;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\View\Compilers\BladeCompiler;
-use Spatie\Permission\Contracts\Role as RoleContract;
-use Spatie\Permission\Contracts\Permission as PermissionContract;
+use Jarhen\Permission\Contracts\Role as RoleContract;
+use Jarhen\Permission\Contracts\Permission as PermissionContract;
 
 class PermissionServiceProvider extends ServiceProvider
 {

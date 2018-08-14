@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\Permission;
+namespace Jarhen\Permission;
 
 use Illuminate\Support\Collection;
 

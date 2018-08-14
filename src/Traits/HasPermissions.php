@@ -1,13 +1,13 @@
 <?php
 
-namespace Spatie\Permission\Traits;
+namespace Jarhen\Permission\Traits;
 
-use Spatie\Permission\Guard;
+use Jarhen\Permission\Guard;
 use Illuminate\Support\Collection;
 use Illuminate\Database\Eloquent\Builder;
-use Spatie\Permission\PermissionRegistrar;
-use Spatie\Permission\Contracts\Permission;
-use Spatie\Permission\Exceptions\GuardDoesNotMatch;
+use Jarhen\Permission\PermissionRegistrar;
+use Jarhen\Permission\Contracts\Permission;
+use Jarhen\Permission\Exceptions\GuardDoesNotMatch;
 use Illuminate\Database\Eloquent\Relations\MorphToMany;
 
 trait HasPermissions
@@ -41,7 +41,7 @@ trait HasPermissions
      * Scope the model query to certain permissions only.
      *
      * @param \Illuminate\Database\Eloquent\Builder $query
-     * @param string|array|\Spatie\Permission\Contracts\Permission|\Illuminate\Support\Collection $permissions
+     * @param string|array|\Jarhen\Permission\Contracts\Permission|\Illuminate\Support\Collection $permissions
      *
      * @return \Illuminate\Database\Eloquent\Builder
      */
@@ -74,7 +74,7 @@ trait HasPermissions
     }
 
     /**
-     * @param string|array|\Spatie\Permission\Contracts\Permission|\Illuminate\Support\Collection $permissions
+     * @param string|array|\Jarhen\Permission\Contracts\Permission|\Illuminate\Support\Collection $permissions
      *
      * @return array
      */
@@ -98,7 +98,7 @@ trait HasPermissions
     /**
      * Determine if the model may perform the given permission.
      *
-     * @param string|\Spatie\Permission\Contracts\Permission $permission
+     * @param string|\Jarhen\Permission\Contracts\Permission $permission
      * @param string|null $guardName
      *
      * @return bool
@@ -166,7 +166,7 @@ trait HasPermissions
     /**
      * Determine if the model has, via roles, the given permission.
      *
-     * @param \Spatie\Permission\Contracts\Permission $permission
+     * @param \Jarhen\Permission\Contracts\Permission $permission
      *
      * @return bool
      */
@@ -178,7 +178,7 @@ trait HasPermissions
     /**
      * Determine if the model has the given permission.
      *
-     * @param string|\Spatie\Permission\Contracts\Permission $permission
+     * @param string|\Jarhen\Permission\Contracts\Permission $permission
      *
      * @return bool
      */
@@ -226,7 +226,7 @@ trait HasPermissions
     /**
      * Grant the given permission(s) to a role.
      *
-     * @param string|array|\Spatie\Permission\Contracts\Permission|\Illuminate\Support\Collection $permissions
+     * @param string|array|\Jarhen\Permission\Contracts\Permission|\Illuminate\Support\Collection $permissions
      *
      * @return $this
      */
@@ -252,7 +252,7 @@ trait HasPermissions
     /**
      * Remove all current permissions and set the given ones.
      *
-     * @param string|array|\Spatie\Permission\Contracts\Permission|\Illuminate\Support\Collection $permissions
+     * @param string|array|\Jarhen\Permission\Contracts\Permission|\Illuminate\Support\Collection $permissions
      *
      * @return $this
      */
@@ -266,7 +266,7 @@ trait HasPermissions
     /**
      * Revoke the given permission.
      *
-     * @param \Spatie\Permission\Contracts\Permission|\Spatie\Permission\Contracts\Permission[]|string|string[] $permission
+     * @param \Jarhen\Permission\Contracts\Permission|\Jarhen\Permission\Contracts\Permission[]|string|string[] $permission
      *
      * @return $this
      */
@@ -280,9 +280,9 @@ trait HasPermissions
     }
 
     /**
-     * @param string|array|\Spatie\Permission\Contracts\Permission|\Illuminate\Support\Collection $permissions
+     * @param string|array|\Jarhen\Permission\Contracts\Permission|\Illuminate\Support\Collection $permissions
      *
-     * @return \Spatie\Permission\Contracts\Permission|\Spatie\Permission\Contracts\Permission[]|\Illuminate\Support\Collection
+     * @return \Jarhen\Permission\Contracts\Permission|\Jarhen\Permission\Contracts\Permission[]|\Illuminate\Support\Collection
      */
     protected function getStoredPermission($permissions)
     {
@@ -305,9 +305,9 @@ trait HasPermissions
     }
 
     /**
-     * @param \Spatie\Permission\Contracts\Permission|\Spatie\Permission\Contracts\Role $roleOrPermission
+     * @param \Jarhen\Permission\Contracts\Permission|\Jarhen\Permission\Contracts\Role $roleOrPermission
      *
-     * @throws \Spatie\Permission\Exceptions\GuardDoesNotMatch
+     * @throws \Jarhen\Permission\Exceptions\GuardDoesNotMatch
      */
     protected function ensureModelSharesGuard($roleOrPermission)
     {

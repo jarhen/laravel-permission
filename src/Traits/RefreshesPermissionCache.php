@@ -1,8 +1,8 @@
 <?php
 
-namespace Spatie\Permission\Traits;
+namespace Jarhen\Permission\Traits;
 
-use Spatie\Permission\PermissionRegistrar;
+use Jarhen\Permission\PermissionRegistrar;
 
 trait RefreshesPermissionCache
 {

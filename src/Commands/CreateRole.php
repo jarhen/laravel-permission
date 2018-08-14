@@ -1,9 +1,9 @@
 <?php
 
-namespace Spatie\Permission\Commands;
+namespace Jarhen\Permission\Commands;
 
 use Illuminate\Console\Command;
-use Spatie\Permission\Contracts\Role as RoleContract;
+use Jarhen\Permission\Contracts\Role as RoleContract;
 
 class CreateRole extends Command
 {
